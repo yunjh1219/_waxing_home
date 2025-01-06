@@ -1,0 +1,46 @@
+.middle-middle{
+    padding: 30px 0;
+    height: 820px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("/img/main/main_logo_1.jpg"); /* 배경 이미지 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    background-position: center center; /* 이미지 가운데 정렬 */
+    background-size: cover; /* 배경 이미지가 섹션을 덮도록 설정 */
+    background-attachment: fixed; /* 스크롤 시 배경 이미지 고정 */
+    position: relative;
+
+    display: flex;               /* Flexbox 레이아웃 활성화 */
+    flex-direction: column;      /* 세로 방향(수직) 정렬 */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+
+}
+
+.middle-middle h1 {
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+    opacity: 0;  /* 애니메이션 전에는 보이지 않음 */
+    animation: slideUp 1s ease-out forwards; /* 애니메이션 적용 */
+}
+
+/* 아래에서 위로 슬라이드하는 애니메이션 */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px); /* 아래에서 시작 */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* 원래 위치 */
+        opacity: 1;
+    }
+}
+
+.middle-middle h2 {
+    font-size: 35px;          /* 글자 크기를 50px로 설정 */
+    text-align: center;       /* 텍스트를 수평 중앙 정렬 */
+    color: white;             /* 글자 색상을 흰색으로 설정 */
+
+}
