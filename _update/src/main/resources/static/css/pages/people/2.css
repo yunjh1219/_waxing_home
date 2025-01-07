@@ -23,11 +23,11 @@
     color: white;
     margin: 10px 0;
     opacity: 0;  /* 애니메이션 전에는 보이지 않음 */
-    animation: headerslideUp 1s ease-out forwards; /* 애니메이션 적용 */
+    animation: slideUp 1s ease-out forwards; /* 애니메이션 적용 */
 }
 
 /* 아래에서 위로 슬라이드하는 애니메이션 */
-@keyframes headerslideUp {
+@keyframes slideUp {
     from {
         transform: translateY(100px); /* 아래에서 시작 */
         opacity: 0;
@@ -46,91 +46,54 @@
 
 
 .middle{
-    display: flex;
+    padding: 0 20px;
     margin-top: 150px;
+    display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 40px;
 }
 
-.middle-top,
-.middle-middle,
-.middle-bottom{
+
+.middle-top, .middle-bottom{
     display: flex;
     height: 600px;
     width: 100%;
     align-items: center;
-
+    background-color: blue;
     justify-content: space-between; /* 이미지와 텍스트를 양쪽 끝으로 정렬 */
 }
 
 .middle-top-img,
-.middle-bottom-img,
-.middle-middle-img{
+.middle-top-text {
     width: 50%; /* 각각 50% 할당 */
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
 }
 
-.middle-top-img img,
-.middle-middle-img img,
-.middle-bottom-img img{
+
+.middle-middle{
+    display: flex;
+    height: 600px;
     width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #c75e5e;
+}
+
+
+.middle-top img, .middle-bottom img{
+    width: 100%; /* 각각 50% 할당 */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.middle-middle img{
+    width: 50%;
     height: 100%;
 }
 
-.middle-top-text,
-.middle-bottom-text{
-    width: 50%; /* 각각 50% 할당 */
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    padding-left: 200px;
-}
-
-.middle-middle-text{
-    width: 50%; /* 각각 50% 할당 */
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    padding-left: 150px;
-
-}
-
-
-
-/* 초기 상태 (보이지 않게 설정) */
-.middle-top-text h1, .middle-middle-text h1, .middle-bottom-text h1{
-    font-size: 60px;
-    font-weight: bold;
-    text-align: left;
-    width: 100%;
-    opacity: 0; /* 요소가 보이지 않도록 설정 */
-    transform: translateY(20px); /* 요소를 아래로 밀어 숨김 */
-    transition: opacity 1s ease, transform 0.6s ease; /* 애니메이션 효과 */
-}
-
-.middle-top-text h2, .middle-middle-text h2, .middle-bottom-text h2 {
-    margin-top: 5px;
-    font-size: 25px;
-
-    text-align: left;
-    width: 100%;
-    opacity: 0; /* 요소가 보이지 않도록 설정 */
-    transform: translateY(20px); /* 요소를 아래로 밀어 숨김 */
-    transition: opacity 1s ease, transform 0.6s ease; /* 애니메이션 효과 */
-}
-
-.middle-top-text h3, .middle-middle-text h3, .middle-bottom-text h3 {
-    margin-top: 20px;
-    font-size: 22px;
-    color: #737373;
-    text-align: left;
-    width: 100%;
-    opacity: 0; /* 요소가 보이지 않도록 설정 */
-    transform: translateY(20px); /* 요소를 아래로 밀어 숨김 */
-    transition: opacity 1.5s ease, transform 0.6s ease; /* 애니메이션 효과 */
-}
