@@ -11,7 +11,11 @@
 
   <!-- 개인 -->
   <link rel="stylesheet" th:inline="css" th:href="@{/css/pages/people/people.css}">
-  <script th:inline="javascript" type="text/javascript" th:src="@{/js/pages/people/people.js}"></script>
+    <!-- Leaflet JS (먼저 로드) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script th:inline="javascript" type="text/javascript" th:src="@{/js/pages/people/people.js}" defer></script>
+
+
 </head>
 <th:block layout:fragment="content">
   <div class="content">
@@ -22,9 +26,7 @@
       </div>
 
       <div class="middle">
-          <h1>
 
-          </h1>
 
           <div class="middle-top">
               <div class="middle-top-img">
@@ -33,8 +35,8 @@
               <div class="middle-top-text">
                   <h1>Safety</h1>
                   <h2>피부에 닿는만큼 위생적이게</h2>
-                  <h3>10년간 10000번 이상의 시술<br>
-                      체계적인 교육과 경험 바탕의 전문 왁서
+                  <h3>'노더블딥'으로 스틱을 재사용하지 않습니다<br>
+                      매번 소독을 통해 청결을 유지합니다
                   </h3>
               </div>
           </div>
@@ -60,16 +62,18 @@
               <div class="middle-bottom-text">
                   <h1>Service</h1>
                   <h2>기본서비스로 제공되는 다과&음료</h2>
-                  <h3>10년간 10000번 이상의 시술<br>
-                      체계적인 교육과 경험 바탕의 전문 왁서
+                  <h3>편안한 분위기에<br>
+                      즐거운 경험을
                   </h3>
               </div>
           </div>
 
-
-
-
+          <!-- ✅ 지도 추가 (bottom 영역) -->
+          <div class="bottom-fotter">
+              <div id="map"></div>
+          </div>
       </div>
   </div>
+
 </th:block>
 </html>
