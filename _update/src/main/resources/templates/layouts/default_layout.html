@@ -6,13 +6,14 @@
   <title>Thymeleaf Layout</title>
   <!-- config fragment 사용 -->
   <th:block th:replace="~{fragments/config :: configFragment}"></th:block>
-  <!-- header fragment 사용 -->
   <th:block th:replace="~{fragments/header :: headerFragment}"></th:block>
 </head>
 <body id="page-top">
 
-<!-- content fragment 사용 -->
+<div class="content">
+  <!-- content fragment 사용 -->
 <th:block layout:fragment="content"></th:block>
+</div>
 
 <!-- footer fragment 사용 -->
 <th:block th:replace="~{fragments/footer :: footerFragment}"></th:block>

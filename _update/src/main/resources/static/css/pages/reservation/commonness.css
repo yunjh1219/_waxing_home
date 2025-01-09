@@ -1,19 +1,4 @@
-/* 콘텐츠 스타일 */
-.content {
-    position: relative;
-    background-color: #f8f8f8; /* 콘텐츠 배경 색상 */
-    margin: 0; /* 마진 제거 */
-    padding: 0; /* 패딩 제거 */
-    box-sizing: border-box; /* 패딩과 테두리를 포함하여 크기를 계산 */
-    overflow: hidden; /* 콘텐츠가 넘치지 않도록 설정 */
-    width: 100%;
-    height: 100vh; /* 전체 화면 높이 */
-    flex-direction: column;
-    align-items: center; /* 수평 중앙 정렬 */
-    display: flex;
 
-    min-height: 1500px;
-}
 
 /* 부킹 헤더 스타일 */
 .booking-header {
