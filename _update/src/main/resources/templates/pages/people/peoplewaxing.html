@@ -10,16 +10,25 @@
 
 
   <!-- 개인 -->
-  <link rel="stylesheet" th:inline="css" th:href="@{/css/pages/people/people.css}">
+    <link rel="stylesheet" th:inline="css" th:href="@{/css/pages/people/people.css}">
+    <link rel="stylesheet" th:inline="css" th:href="@{/css/pages/people/common.css}">
     <script th:inline="javascript" type="text/javascript" th:src="@{/js/pages/people/people.js}" defer></script>
 
 </head>
 <th:block layout:fragment="content">
   <div class="content">
 
-      <div class="header-imgcontainer">
-        <h2>왜 왁싱은 피플왁싱일까요?</h2>
-        <h1>왁싱의 기준, 피플왁싱</h1>
+      <div class="main-header">
+          <div class="header-imgcontainer">
+              <h2>왜 왁싱은 피플왁싱일까요?</h2>
+              <h1>왁싱의 기준, 피플왁싱</h1>
+          </div>
+          <nav class="commu-header-nav">
+              <ul>
+                  <li><a href="/peoplewaxing" class="active">피플왁싱</a></li>
+                  <li><a href="/directions" class="#">오시는길</a></li>
+              </ul>
+          </nav>
       </div>
 
       <div class="middle">

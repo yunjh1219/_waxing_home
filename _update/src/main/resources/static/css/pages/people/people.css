@@ -1,21 +1,4 @@
-.header-imgcontainer{
-    padding: 30px 0;
-    height: 870px;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("/img/main/main_logo_1.jpg"); /* 배경 이미지 설정 */
-    background-repeat: no-repeat; /* 이미지 반복 방지 */
-    background-position: center center; /* 이미지 가운데 정렬 */
-    background-size: cover; /* 배경 이미지가 섹션을 덮도록 설정 */
 
-    position: relative;
-
-    display: flex;               /* Flexbox 레이아웃 활성화 */
-    flex-direction: column;      /* 세로 방향(수직) 정렬 */
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 120px;
-
-}
 
 .header-imgcontainer h1 {
     font-size: 90px;
