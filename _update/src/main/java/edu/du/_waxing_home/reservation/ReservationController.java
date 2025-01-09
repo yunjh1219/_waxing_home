@@ -35,7 +35,7 @@ public class ReservationController {
         // 모델에 예약 목록과 검색 날짜를 추가
         model.addAttribute("reservations", reservations);
         model.addAttribute("searchDate", reservationDate);
-        return "pages/reservationlist";  // Thymeleaf 템플릿 반환
+        return "pages/admin/reservation/reservationlist";  // Thymeleaf 템플릿 반환
     }
 
 

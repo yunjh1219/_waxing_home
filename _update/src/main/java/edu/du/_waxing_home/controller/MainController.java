@@ -49,10 +49,10 @@ public class MainController {
     public String bestreview() { return "pages/bestreview/bestreview";}
 
     //Manager Menu
-    @GetMapping("/guestlist")
-    public String manger() { return "pages/manager/guestlist";}
+    @GetMapping("/customerlist")
+    public String manger() { return "pages/admin/customer/customerlist";}
     @GetMapping("/reservationlist")
-    public String reservationlist() { return "pages/manager/reservationlist";}
+    public String reservationlist() { return "pages/admin/reservation/reservationlist";}
 
     //Write form
     @GetMapping("/writenews")

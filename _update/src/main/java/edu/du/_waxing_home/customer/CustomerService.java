@@ -9,25 +9,25 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
 
     @Autowired
-    private CustomerRepository customerRepository;  // PatientRepository를 사용하여 환자 정보 저장
+    private CustomerRepository customerRepository;
 
     // 특정 환자 조회
-    public Customer getPatientById(Long patientId) {
-        return customerRepository.findById(patientId).orElse(null);
+    public Customer getCustomerById(Long Id) {
+        return customerRepository.findById(Id).orElse(null);
     }
 
     // 환자 저장
-    public void savePatient(Customer customer) {
+    public void saveCustomer(Customer customer) {
         customerRepository.save(customer);
     }
 
     // 페이징 처리된 모든 환자 조회
-    public Page<Customer> getPatients(Pageable pageable) {
+    public Page<Customer> getCustomers(Pageable pageable) {
         return customerRepository.findAll(pageable);
     }
 
     // 검색 조건에 맞는 환자 조회 (페이징 처리)
-    public Page<Customer> searchPatients(String search, String searchType, Pageable pageable) {
+    public Page<Customer> searchCustomers(String search, String searchType, Pageable pageable) {
         switch (searchType) {
             case "id":
                 try {

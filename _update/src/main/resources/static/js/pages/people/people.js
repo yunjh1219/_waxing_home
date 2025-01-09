@@ -30,16 +30,3 @@ function debounce(func, delay) {
     };
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var map = L.map('map').setView([37.5665, 126.9780], 13); // 서울 시청 좌표
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19
-    }).addTo(map);
-
-    // 마커 추가
-    L.marker([37.5665, 126.9780]).addTo(map)
-        .bindPopup('<b>서울 시청</b><br>여기에 표시됩니다.')
-        .openPopup();
-});
-
-

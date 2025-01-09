@@ -60,7 +60,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Patient{" +
+        return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", phonenumber='" + phonenumber + '\'' +
