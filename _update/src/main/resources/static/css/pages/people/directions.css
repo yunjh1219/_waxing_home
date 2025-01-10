@@ -165,7 +165,7 @@
 }
 
 /* 지도 스타일 */
-#map {
+#dmap {
     position: relative; /* 위치 기준을 설정 */
 
     width: 100%;

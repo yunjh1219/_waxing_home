@@ -2,7 +2,7 @@
 .image-container {
     position: relative;
     width: 100%;
-    height: 820px; /* 원하는 높이 */
+    height: 865px; /* 원하는 높이 */
     overflow: hidden;
 }
 
@@ -64,7 +64,7 @@
 
 /* ------------------------------- */
 .middle{
-    background-color: white;
+
     position: relative;
     display: flex;
 
@@ -103,6 +103,7 @@
 .header-item h1, .header-item h4 {
     margin: 0;
     text-align: center; /* 중앙 정렬 */
+
 }
 
 
@@ -111,6 +112,7 @@
     color : black;
     font-size: 3em; /* 아이콘 크기 조정 */
     margin-bottom: 10px; /* 아이콘과 텍스트 사이 간격 */
+
 }
 
 
@@ -122,7 +124,7 @@
     display: inline-block;
     text-decoration: none;
     color : #585858;
-
+    background-color: white;
     padding: 8px 15px;
 
     border: 1px solid silver; /* 각 항목 사이에 수직선 추가 */
@@ -139,7 +141,7 @@
 .middle-middle{
     padding: 30px 0;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/img/main/woman.jpg"); /* 배경 이미지 설정 */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("/img/main/woman.jpg"); /* 배경 이미지 설정 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */
     background-position: center center; /* 이미지 가운데 정렬 */
     background-size: cover; /* 배경 이미지가 섹션을 덮도록 설정 */
@@ -151,11 +153,20 @@
 }
 
 
-.middle-middle h1{
+.middle-middle h1 {
     font-size: 50px;
     text-align: center;
     color: white;
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 위로 올라오는 효과 */
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
+/* 스크롤 시 보이는 상태 */
+.middle-middle h1.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .middle-img {
@@ -169,14 +180,24 @@
 }
 
 /* .image-item 클래스: 각 이미지 스타일 */
+/* 초기 상태: 투명하고 아래에 위치 */
 .image-item {
-    position: relative; /* 텍스트 오버레이를 위해 상대 위치 설정 */
-    overflow: hidden; /* 이미지가 영역을 벗어나지 않도록 설정 */
-    width: 630px; /* 두 이미지를 한 줄에 배치하기 위해 48% 크기 설정 */
-    box-sizing: border-box; /* padding, margin 포함해서 크기 계산 */
+    position: relative;
+    overflow: hidden;
+    width: 630px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center; /* 이미지 중앙 정렬 */
-    align-items: center; /* 이미지 수직 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px); /* 아래에서 올라오도록 */
+    transition: opacity 0.7s ease-out, transform 1s ease-out;
+}
+
+/* 스크롤 시 보이는 상태 */
+.image-item.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* 이미지 스타일 */
@@ -286,7 +307,7 @@
 
     padding: 30px 0;
     width: 100%;
-    background-color: floralwhite;
+
 
 }
 
@@ -494,3 +515,7 @@
 .text-overlay a:hover{
     color: black;
 }
+
+
+/*-- main-bottom --*/
+/*----------------------------------------------*/

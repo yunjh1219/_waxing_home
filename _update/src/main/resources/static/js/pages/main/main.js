@@ -50,3 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// 스크롤 시 .image-item이 나타나는 효과
+document.addEventListener("DOMContentLoaded", function () {
+    const elementsToShow = document.querySelectorAll('.image-item, .middle-middle h1');
+
+    function handleScroll() {
+        elementsToShow.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.9) {
+                item.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // 페이지 로딩 시 한 번 실행
+});

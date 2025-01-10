@@ -12,10 +12,7 @@
   <!-- 개인 -->
   <link rel="stylesheet" th:inline="css" th:href="@{/css/pages/people/directions.css}">
   <link rel="stylesheet" th:inline="css" th:href="@{/css/pages/people/common.css}">
-  <script th:inline="javascript" type="text/javascript" th:src="@{/js/pages/people/directions.js}" defer></script>
 
-  <!-- Naver Map API 사용 -->
-  <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b7a18fn4k4&callback=initMap"></script>
 
 </head>
 <th:block layout:fragment="content">
@@ -61,9 +58,8 @@
           <h3>평일 : am10:00 ~ pm09:00(야) <br>
             주말 : am09:00 ~ pm03:00(주)
           </h3>
-
         </div>
-        <div id="map"></div>
+        <div class="map" id="dmap"></div>
       </div>
     </div>
 

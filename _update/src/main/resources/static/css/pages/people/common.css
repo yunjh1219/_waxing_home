@@ -7,7 +7,7 @@
 
 .header-imgcontainer{
     padding: 30px 0;
-    height: 852px;
+    height: 865px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("/img/main/main_logo_1.jpg"); /* 배경 이미지 설정 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */

@@ -33,7 +33,7 @@ body {
     position: relative;
 
     margin: 0; /* 마진 제거 */
-    padding-bottom: 30px;
+
     box-sizing: border-box; /* 패딩과 테두리를 포함하여 크기를 계산 */
     overflow: hidden; /* 콘텐츠가 넘치지 않도록 설정 */
     width: 100%;
@@ -42,6 +42,7 @@ body {
     align-items: center; /* 수평 중앙 정렬 */
     display: flex;
     min-height: 800px;
+    background-color: #fafafa; /* 더 밝고 깨끗한 느낌 */
 }
 
 footer {
