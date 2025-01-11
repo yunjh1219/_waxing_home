@@ -19,10 +19,10 @@
     position: relative; /* 위치 기준을 설정 */
     width: 60%;
     height: 700px;
-    z-index: 1; /* 지도는 배경이므로 낮은 z-index로 설정 */
-    opacity: 0; /* 처음에는 안 보이게 설정 */
-    transform: translateY(50px); /* 처음에는 아래로 50px 이동 */
-    transition: opacity 1s ease, transform 1s ease; /* 애니메이션 효과 */
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 /* footer-top-container */
