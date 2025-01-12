@@ -12,11 +12,11 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userID")
     private Long id;
 
     private String username;
     private String password;
+    private String name;
     private String email;
     private String phone;
     private String address;

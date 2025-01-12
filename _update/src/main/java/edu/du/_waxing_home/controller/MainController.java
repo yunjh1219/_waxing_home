@@ -62,13 +62,8 @@ public class MainController {
     @GetMapping("/writeevent")
     public String writeevent() { return "pages/write/writeevent";}
 
-    @GetMapping("/login")
-    public String login() { return "pages/auth/login";}
 
-    @GetMapping("/signupone")
-    public String signupone() { return "pages/auth/signupone";}
 
-    @GetMapping("/signuptwo")
-    public String signuptwo() { return "pages/auth/signuptwo";}
+
 
 }
