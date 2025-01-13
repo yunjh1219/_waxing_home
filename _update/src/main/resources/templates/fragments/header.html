@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
   <title> 헤더영역</title>
 </head>
@@ -22,10 +22,16 @@
         <li>
           <a href="/brazlianwaxing">서비스</a>
           <ul class="gnb_depth2">
-            <li><a href="/brazlianwaxing">브라질리언왁싱</a> </li>
-            <li><a href="/bodywaxing">바디왁싱</a> </li>
-            <li><a href="/facewaxing">페이스왁싱</a> </li>
-            <li><a href="/pregnantwaxing">임산부왁싱</a> </li>
+            <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">브라질리언왁싱</a></li>
+            <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">바디왁싱</a></li>
+            <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">페이스왁싱</a></li>
+            <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">임산부왁싱</a></li>
+
+<!--            <li><a href="/brazlianwaxing">브라질리언왁싱</a> </li>-->
+<!--            <li><a href="/bodywaxing">바디왁싱</a> </li>-->
+<!--            <li><a href="/facewaxing">페이스왁싱</a> </li>-->
+<!--            <li><a href="/pregnantwaxing">임산부왁싱</a> </li>-->
+
           </ul>
         </li>
         <li>
@@ -40,24 +46,33 @@
           <a href="/reservaion">예약안내</a>
           <ul class="gnb_depth2">
             <li><a href="/reservaion">온라인예약</a> </li>
-            <li><a href="/counseling">온라인상담</a> </li>
+            <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">온라인상담</a></li>
+<!--            <li><a href="/counseling">온라인상담</a> </li>-->
           </ul>
         </li>
-        <li><a href="/cost">가격안내</a></li>
-        <li><a href="/bestreview">베스트후기</a></li>
+        <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">가격안내</a></li>
+        <li><a href="javascript:void(0);" onclick="showUnderConstructionMessage()">베스트후기</a></li>
+<!--        <li><a href="/cost">가격안내</a></li>-->
+<!--        <li><a href="/bestreview">베스트후기</a></li>-->
 
-        <li>
+        <li sec:authorize="hasRole('ROLE_ADMIN')">
           <a href="#">관리자용</a>
           <ul class="gnb_depth2">
             <li><a href="/reservation/list">예약명단</a> </li>
             <li><a href="/customer/list">고객명단</a> </li>
+            <li><a href="/review/listall">리뷰등록관리</a></li>
           </ul>
         </li>
+
       </ul>
-      <!-- 로그인 / 회원가입 -->
+      <!-- 로그인 / 회원가입 / 로그아웃 -->
       <div class="auth-links">
-        <a href="/login" class="login">Login</a>
-        <a href="/signupone" class="signupone">회원가입</a>
+        <!-- 인증되지 않은 경우 로그인 및 회원가입 링크 표시 -->
+        <a sec:authorize="isAnonymous()" href="/login" class="login">Login</a>
+        <a sec:authorize="isAnonymous()" href="/signupone" class="signupone">회원가입</a>
+
+        <!-- 인증된 경우 로그아웃 링크 표시 -->
+        <a sec:authorize="isAuthenticated()" href="/logout" class="logout">Logout</a>
       </div>
       <!--        <a href="#" class="btn_gnb"></a>-->
       <button class="hamburger-menu" onclick="toggleMenu(this)" aria-label="Main Menu">

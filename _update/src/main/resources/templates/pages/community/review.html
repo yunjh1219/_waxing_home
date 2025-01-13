@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layouts/default_layout}">
 <head>
   <title>main homepage</title>
@@ -48,7 +48,7 @@
           </tr>
           </tbody>
         </table>
-        <a href="/writereview" class="create-post-link">글쓰기</a>
+        <a href="/writereview" class="create-post-link" sec:authorize="hasRole('ROLE_ADMIN')">글쓰기</a>
         <!-- 페이지네이션 -->
 <!--        <div class="pagination">-->
 <!--          <a href="#">&lt;</a>  &lt;!&ndash; 이전 페이지 버튼 &ndash;&gt;-->

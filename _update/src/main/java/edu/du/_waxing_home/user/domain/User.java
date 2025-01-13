@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Getter
@@ -22,6 +23,13 @@ public class User {
     private String address;
 
     @Enumerated(EnumType.STRING)
-    private Role role; // user role (admin, user)
+    private Role role;
+
+    @PrePersist
+    public void setDefaultRole() {
+        if (this.role == null) {
+            this.role = Role.ROLE_ADMIN; // 기본값을 USER로 설정
+        }
+    }
 
 }
