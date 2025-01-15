@@ -38,9 +38,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-
-
-
+                .csrf().disable()  // CSRF 보호 비활성화 (비회원 요청을 허용할 때 필요할 수 있음)
+                
                 // 세션 관리 설정
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)  // 세션이 필요할 때만 생성
@@ -53,7 +52,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 // 요청에 대한 접근 권한 설정
                 .authorizeRequests()
-                .antMatchers("/**", "/css/**", "/js/**", "/img/**").permitAll()  // 로그인, 회원가입, CSS, JS, 이미지 파일은 인증 없이 접근 가능
+                .antMatchers("/api/**").permitAll()  // 인증 없이 접근 가능 (예약)
+                .antMatchers("/**", "/css/**", "/js/**", "/img/**", "/reservation/**").permitAll()  // 로그인, 회원가입, CSS, JS, 이미지 파일은 인증 없이 접근 가능
                 .antMatchers("/admin/**").hasRole("ADMIN")  // /admin 하위 경로는 ADMIN 역할을 가진 사용자만 접근 가능
                 .anyRequest().authenticated()  // 나머지 경로는 인증 필요
                 .and()
