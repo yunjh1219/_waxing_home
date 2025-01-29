@@ -28,7 +28,7 @@ public class User {
     @PrePersist
     public void setDefaultRole() {
         if (this.role == null) {
-            this.role = Role.ROLE_ADMIN; // 기본값을 USER로 설정
+            this.role = Role.USER; //
         }
     }
 
