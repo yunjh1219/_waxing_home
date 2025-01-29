@@ -4,6 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class AuthController {
@@ -22,5 +23,18 @@ public class AuthController {
 
         return "pages/main";
     }
+
+    // 로그인 페이지
+    @GetMapping("/api/login")
+    public String loginPage() {
+        return "pages/auth/login";
+    }
+
+    @GetMapping("/api/signup")
+    public String signOnePage(){
+        return "pages/auth/signupone";
+    }
+
+
 
 }
