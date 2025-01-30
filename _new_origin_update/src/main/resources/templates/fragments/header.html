@@ -68,8 +68,8 @@
       <!-- 로그인 / 회원가입 / 로그아웃 -->
       <div class="auth-links">
         <!-- 인증되지 않은 경우 로그인 및 회원가입 링크 표시 -->
-        <a sec:authorize="isAnonymous()" th:href="@{/api/login}" class="login">Login</a>
-        <a sec:authorize="isAnonymous()" th:href="@{/api/singup}" class="signupone">회원가입</a>
+        <a sec:authorize="isAnonymous()" th:href="@{/login}" class="login">Login</a>
+        <a sec:authorize="isAnonymous()" th:href="@{/signupone}" class="signupone">회원가입</a>
 
         <!-- 인증된 경우 로그아웃 링크 표시 -->
         <a sec:authorize="isAuthenticated()" href="/logout" class="logout">Logout</a>
